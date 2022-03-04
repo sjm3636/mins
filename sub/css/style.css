@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Monoton&family=Play&display=swap');
+*{margin: 0; padding: 0;}
+ul{list-style: none;}
+a{color: inherit; text-decoration: none;}
+
+#wrap{
+    background-color: #333;
+    width: 100%;
+    height: 100vh;
+    /* vh: viewport height 
+            보고있는 기기, 브라우저
+            의 높이값을 상대값으로 채움
+    */  
+    overflow: hidden;
+    position: relative;
+}
+
+video{
+    width: 100%;
+    min-width: 1600px;
+}
+
+header{
+    transform: skew(-40deg);
+    position: absolute;
+    height: 100%;
+    top: 0;    
+    left: -420px;
+    width: 700px;
+    background-image: linear-gradient(-45deg, #e6fc55,#b9fb05,#97e031);
+}
+
+h1{
+    position: absolute;
+    top: 40px;
+    left: 200px;
+    transform: skew(40deg);
+}
+
+.gnb{
+    position: absolute;
+    top: 150px;
+    right: 0;
+}
+
+.gnb span{
+    transform: skew(40deg);
+    display: block;
+    font-family: 'play';
+    font-size: 18px;
+    font-weight: bold;
+    font-style: italic;    
+}
+
+/* 바로 아래 선택자(자식) 잡기 */
+.gnb>li>a:hover{
+    background-color: #111;
+    color: #fff;
+}
+
+.gnb>li>a{
+    display: block;
+    width: 220px;
+    text-align: right;
+    padding-right: 40px;
+    box-sizing: border-box;
+    line-height: 50px;
+}
+
+.gnb>li:first-child>a{
+    background-color: #111;
+    color: #fff;
+}
+
+.gnb>li{
+    position: relative;
+}
+
+.gnb .sub{
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: all 0.4s;
+    opacity: 0;
+}
+
+.gnb>li:hover .sub{
+    left: 205px;    
+    opacity: 0.8;
+}
+
+.gnb .sub a{
+    display: block;
+    width: 150px;
+    text-align: center;
+    background-color: #222;
+    color: #fff;
+    border-bottom: 1px solid #b9fb05;
+    font-size: 16px;
+    font-family: arial;
+    font-weight: bold;
+    line-height: 40px;
+}
+.gnb>li:first-child .sub{
+    left: 205px;
+    opacity: 0.8;
+}
+.gnb .sub a:hover{
+    background-color: #b9fb05;
+    color: #333;
+}
+
+.sns{
+    display: flex;
+    position: absolute;
+    top: 60px;
+    right: 50px;
+
+}
+.sns a{
+    font-size: 25px;
+    color: #b9fb05;
+    opacity: 0.5;
+    transition: all 0.5s;
+    margin-left: 30px;
+}
+.sns a:hover{
+    opacity: 1;
+    transform: scale(1.4);
+}
+article{
+    position: absolute;
+    top: 200px;
+    right: 70px;
+}
+article .txt1{
+    line-height: 1;
+    /* line-height는 px로 줘도 되지만,
+    뒤에 단위 없이 줄 경우 폰트사이즈의 배수로 들어감 */
+    font-size: 160px;
+    color: #b9fb05;
+    font-family: 'monoton';
+    letter-spacing: -1px; 
+    /* 글자 자간 */
+
+}
+.txt1 span{
+    font-size: 50px;
+    color: #bbb;
+    font-family: 'play';
+    font-style: italic;
+}
+.txt2{
+    color: #bbb;
+    font-size: 34px;
+    font-family: 'play';
+    letter-spacing: -2px;
+}
+
+.txt2 span{
+    color: #b9fb05;
+    font-family: 'arial';
+    font-weight: bold;
+    margin-left: 20px;
+}
+section{
+    width: 800px;
+    height: 100%;
+    /* height: 100%는
+    css 작성자가 해당 요소의 부모에게 
+    height값을 설정을 해뒀을때만 작동
+    
+    예외사항: position:absolute/fixed가 됐을때?
+    */
+    background-color: #111;
+    position: absolute;
+    right: -800px;
+    bottom: 0;
+    opacity: 0.5;
+    transform: skewX(-40deg);
+    transition: all 0.5s;
+}
+section:hover{
+    right: -500px;
+    opacity: 0.8;
+}
+.con{
+    width: 400px;
+    height: 100%;
+    position: absolute;
+    background-color: #000;
+    left: 150px;
+    transition: all 1s;
+}
+section:hover .con{
+    left: 50px;
+}
+
+.cwrap{
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+}
+.cwrap p{
+    color: #a0bd50;
+    transform: skewX(40deg);
+    font-family: 'arial';
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.cwrap div{
+    transform: translateX(200px);
+}
+section:hover .cwrap div{
+    transform: translateX(0);
+}
+.con .cwrap .box1{transition: all 0.4s;}
+.con .cwrap .box2{transition: all 0.8s;}
+.con .cwrap .box3{transition: all 1.2s;}
+
+.btn{
+    position: absolute;
+    left: 100px;
+    bottom: 40px;
+    color: #b9fb05;
+    font-size: 60px;
+    transform: skewX(40deg);
+    width: 150px;
+    
+}
+.btn i{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    animation-name: btn;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    
+
+}
+@keyframes btn{
+    0%{right: 0; opacity: 1; }
+    100%{right: 100px; opacity: 0; transform: scale(1.5);}
+}
+
+.btn i:nth-child(2){animation-delay: 0.5s;}
+.btn i:nth-child(3){animation-delay: 1s;}
+
+section:hover .btn{
+    display: none
+}

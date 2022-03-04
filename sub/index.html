@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>NIKE</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <div id="wrap">
+            <!-- 
+                시맨틱태그 : div와 같이 레이아웃을 나누는 용도로 
+                쓰이나, 의미나 역할이 지정되어있는 태그
+
+                figure: 이미지, 영상 등 미디어매체를 집어넣는
+                레이아웃용 태그
+             -->
+            <figure>
+                <video muted autoplay loop type="video/mp4">
+                    <source src="images/nike.mp4">
+                </video>
+                <!-- html에서 비디오 넣는 방법
+                <video>
+                    <source src="경로">
+                </video>
+
+                옵션들
+                'autoplay'자동재생
+                'loop' 무한반복
+                'controls' 하단에 영상을 컨트럴 할 수 있는 바가 생김
+                'muted' 소리 없애기
+
+                웹접근성 때문에 소리가 재생되는 상태로는
+                자동재생이 불가능하다
+                자동재생을 시키고 싶다면 muted를 반드시 넣어줘야한다.
+
+                'type="video/mp4"'
+                비디오 파일 형식 지정
+                모든 브라우저에서 지원 가능한 동영상 파일 형식은 mp4
+                그것도 H.264+ACC 형식으로만 인코딩 되어있어야 실행가능
+                -->
+            </figure>
+
+            <header>
+                <h1><img src="images/logo2.png"></h1>
+                <ul class="gnb">
+
+                    <li><a href="#"><span>
+                        <i class="fas fa-sync-alt fa-spin"></i>
+                        About NIKE</span></a>
+                        <ul class="sub">
+                            <li><a href="#"><span>English</span></a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#"><span>Brand Info</span></a>
+                    <ul class="sub">
+                        <li><a href="#"><span>sub</span></a></li>
+                        <li><a href="#"><span>sub</span></a></li>
+                        <li><a href="#"><span>sub</span></a></li>
+                        <li><a href="#"><span>sub</span></a></li>
+                    </ul>
+                    </li>
+                    
+                    <li><a href="#"><span>Community</span></a>
+                    <ul class="sub">
+                        <li><a href="#"><span>sub</span></a></li>
+                        <li><a href="#"><span>sub</span></a></li>
+                        <li><a href="#"><span>sub</span></a></li>
+                    </ul>
+                    </li>
+
+                    <li><a href="#"><span>Product Value</span></a>
+                    <ul class="sub">
+                        <li><a href="#"><span>sub</span></a></li>
+                        <li><a href="#"><span>sub</span></a></li>
+                    </ul>
+                    </li>
+
+                    <li><a href="#"><span>Company History</span></a>
+                    <ul class="sub">
+                        <li><a href="#"><span>sub</span></a></li>
+                    </ul>
+                    </li>
+                </ul>
+
+            </header>
+
+            <div class="sns">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-google-plus"></i></a>
+                <a href="#"><i class="fab fa-android"></i></a>
+            </div><!--sns-->
+
+            <!-- article?
+                시맨틱 태그
+                div와 마찬가지로 레이아웃을 나누기 위해 사용하는
+                용도의 태그이나,"텍스트/문단/텍스트덩어리"들이라는
+                의미를 갖고 있음
+             -->
+            <article>
+                <p class="txt1">
+                    50
+                    <span>/24</span>
+                </p>
+
+                <p class="txt2">
+                    Best Qualified
+                    <span>AIR MAX</span>
+                </p>
+            </article>
+
+            <section>
+                <div class="con">
+                    <div class="cwrap">
+                        <div class="box1">
+                            <p>Event & Community</p>
+                            <a href="#">
+                                <img src="images/pic1.png">
+                            </a>
+                        </div><!--box1-->
+                        <div class="box2">
+                            <p>News & Notice</p>
+                            <a href="#">
+                                <img src="images/pic2.png">
+                            </a>
+                        </div><!--box2-->
+                        <div class="box3">
+                            <p>Product Review</p>
+                            <a href="#">
+                                <img src="images/pic3.png">
+                            </a>
+                        </div><!--box3-->
+                    </div>
+                </div><!--con-->
+
+                <div class="btn">
+                    <i class="fas fa-angle-double-left"></i>
+                    <i class="fas fa-angle-double-left"></i>
+                    <i class="fas fa-angle-double-left"></i>
+                </div><!--btn  -->
+            </section>
+
+        </div><!--#wrap-->
+
+        <script src="https://kit.fontawesome.com/7153ba95fd.js" crossorigin="anonymous"></script>
+    </body>
+</html>
